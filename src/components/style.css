@@ -1,0 +1,73 @@
+.title-image {
+  width: 100%;
+}
+
+.introductory-text {
+  margin: 45px 45px 0px 45px;
+}
+
+.figure-text {
+  margin-left: 20px;
+}
+
+.section-header-question {
+  /* margin-left: 20px; */
+  margin-top: 70px
+}
+
+.place-map {
+  width: 100%;
+}
+
+.fish-button-row {
+  margin-top: 50px;
+}
+
+.salmon {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.timeseries {
+  width:100%;
+}
+
+.species-map {
+  width: 100%;
+}
+
+.button-image {
+  width: 100%;
+}
+
+.image-button {
+  position: relative;
+}
+
+.image-button:hover .button-text{
+  visibility: visible;
+}
+
+.button-text {
+  visibility: hidden;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  color: white
+}
+
+.fish-button-row .col {
+  padding: 0px;
+}
+
+.selected-fish-header {
+  margin: 20px;
+}
+
+.select-and-play-image {
+  width: 100%;
+}
+
+body {
+  padding-bottom: 100px;
+}
