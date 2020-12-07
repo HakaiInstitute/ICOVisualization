@@ -8,6 +8,8 @@ function Notebook() {
   useEffect(() => {
     (new Runtime).module(notebook, name => {
       if (name === "viewof sites") return Inspector.into(ref.current.querySelector(".viewof-sites"))();
+      if (name === "viewof cc") return Inspector.into(ref.current.querySelector(".viewof-cc"))();
+
     });
   }, []);
 
