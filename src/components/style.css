@@ -71,3 +71,9 @@
 body {
   padding-bottom: 100px;
 }
+
+.viewof-sites {
+  max-width: 480px;
+  width: 100%;
+  margin: auto;
+}

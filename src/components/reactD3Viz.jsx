@@ -14,7 +14,9 @@ import Sharks from '../assets/sharks.png'
 import SelectAndPlay from '../assets/selectAndPlay.png'
 import SingleTimeSeries from '../assets/timeseriesSingle.png'
 import './style.css'
-import SampleSiteMap from './sampleSiteMap'
+import SampleSiteMap from './observableViz'
+import SampleChart from './observableChart'
+
 // import Chart from '../components/chart.jsx' // Uncomment if you wish to bring D3 into the template, and the <Chart><Chart/> component line in the render function.
 
 export default function ReactD3Viz () {
@@ -48,10 +50,6 @@ export default function ReactD3Viz () {
       <Row>
         <Col>
           Fish observed at <b>Quadra Island</b>
-          {/* <Image // TODO: replace with Observable map
-            className='place-map'
-            src={PlaceMap}
-          /> */}
           <SampleSiteMap />
         </Col>
         <Col>
