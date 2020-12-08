@@ -78,10 +78,8 @@ export default function ReactD3Viz () {
         </Col>
       </Row>
       <Row>
-        <Image // TODO replace with Observable charts. These will need to use state defined in the react app controlled by the category buttons'
-          className='timeseries'
-          src={Timeseries}
-        />
+      <Col><SampleChart /></Col>
+          
       </Row>
       <Row>
         <h1 className='section-header-question'>
