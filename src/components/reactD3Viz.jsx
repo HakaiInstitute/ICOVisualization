@@ -31,7 +31,9 @@ function Notebook() {
       if (name === "viewof cc") return Inspector.into(ref.current.querySelector(".viewof-cc"))();
       if (name === "share") return Inspector.into(ref.current.querySelector(".share"))();
       if (name === "viewof sites") return Inspector.into(ref.current.querySelector(".viewof-sites"))();
-      // if (name === "viewof rects") return Inspector.into(ref.current.querySelector(".viewof-rects"))();
+      if (name === "viewof rects") return Inspector.into(ref.current.querySelector(".viewof-rects"))();
+      if (name === "style") return Inspector.into(ref.current.querySelector(".style"))();
+
 
     });
   }, []);
@@ -75,63 +77,12 @@ function Notebook() {
         </Col>
         <Col>
           <Row className='fish-button-row'>
-            <Col>
-              <div className='image-button center-text' onClick={() => console.log('rockfish')}>
-                <Image className='button-image' src={RockFish}/>
-                <div className='button-text'>
-                  RockFish
-                </div>
-              </div> 
-              {/* <Button block>Salmon</Button> */}
-              <div className='image-button center-text' onClick={() => console.log('Salmon')}>
-                <Image className='button-image' src={Salmon}/>
-                <div className='button-text'>
-                  Salmon
-                </div>
-              </div>
-              <div className='image-button center-text' onClick={() => console.log('Other')}>
-                <Image className='button-image' src={OtherFish}/>
-                <div className='button-text'>
-                  Other
-                </div>
-              </div>
-            </Col>
-            <Col>
-            <div className='image-button center-text' onClick={() => console.log('Flatfish')}>
-                <Image className='button-image' src={Flatfish}/>
-                <div className='button-text'>
-                  FlatFish
-                </div>
-              </div>
-              <div className='image-button center-text' onClick={() => console.log('Sharks')}>
-                <Image className='button-image' src={Sharks}/>
-                <div className='button-text'>
-                  Sharks
-                </div>
-              </div>
-              <div className='image-button center-text' onClick={() => console.log('Other')}>
-                <Image className='button-image' src={All}/>
-                <div className='button-text'>
-                  Other
-                </div>
-              </div>
-            </Col>
-            <Col>
-            <div className='image-button center-text' onClick={() => console.log('Forage Fish')}>
-                <Image className='button-image' src={ForageFish}/>
-                <div className='button-text'>
-                  Forage Fish
-                </div>
-              </div>
-              <div className='image-button center-text' onClick={() => console.log('Other')}>
-                <Image className='button-image' src={Sculpin}/>
-                <div className='button-text'>
-                  Other
-                </div>
-              </div>
-            </Col>
+          <div className="Notebook">
+          <div className="viewof-rects"></div>
+          <div className="style"></div>    
+          </div>
           </Row>
-          <Row className='text-center'>
+          {/* <Row className='text-center'>
             <Col className='selected-fish-header'>
               <h1>RockFish</h1>
             </Col>
@@ -143,10 +94,10 @@ function Notebook() {
               src={SelectAndPlay}
             />
             </Col>
-          </Row>
+          </Row> */}
         </Col>
       </Row>
-      <Row>
+      <Row className='timeseries'>
       <div className="Notebook">
       <div className="share"></div>
       <div className="viewof-cc"></div>

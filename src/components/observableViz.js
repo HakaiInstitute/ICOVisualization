@@ -14,7 +14,7 @@ function Notebook() {
     });
     
 
-    // main.redefine("width", "480");
+    
   }, []);
 
   return (
