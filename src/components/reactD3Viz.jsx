@@ -5,12 +5,14 @@ import TitleImage from '../assets/title.png'
 // import PlaceMap from '../assets/placeMap.png'
 import Timeseries from'../assets/timeseries.png'
 import SpeciesMap from '../assets/speciesMap.png'
-import Salmon from '../assets/salmon.png'
-import Flatfish from '../assets/flatfish.png'
-import ForageFish from '../assets/foragefish.png'
-import OtherFish from '../assets/otherfish.png'
-import RockFish from '../assets/rockfish.png'
-import Sharks from '../assets/sharks.png'
+import Salmon from '../assets/salmon1.jpg'
+import Sculpin from '../assets/sculpin1.jpg'
+import Flatfish from '../assets/flatfish1.jpg'
+import ForageFish from '../assets/forage1.jpg'
+import OtherFish from '../assets/other1.jpg'
+import RockFish from '../assets/rockfish1.jpg'
+import Sharks from '../assets/sharks1.jpg'
+import All from '../assets/all1.jpg'
 import SelectAndPlay from '../assets/selectAndPlay.png'
 import SingleTimeSeries from '../assets/timeseriesSingle.png'
 import './style.css'
@@ -29,6 +31,7 @@ function Notebook() {
       if (name === "viewof cc") return Inspector.into(ref.current.querySelector(".viewof-cc"))();
       if (name === "share") return Inspector.into(ref.current.querySelector(".share"))();
       if (name === "viewof sites") return Inspector.into(ref.current.querySelector(".viewof-sites"))();
+      // if (name === "viewof rects") return Inspector.into(ref.current.querySelector(".viewof-rects"))();
 
     });
   }, []);
@@ -67,31 +70,78 @@ function Notebook() {
         <Col>
           Fish observed at <b>Quadra Island</b>
           <div className="Notebook">
-      <div className="viewof-sites"></div>
-          {/* <SampleSiteMap /> */}
+          <div className="viewof-sites"></div>    
           </div>
         </Col>
         <Col>
-         <Row className='fish-button-row'>
-          <Col>
-            <Button block>RockFish</Button>
-            <Button block>Salmon</Button>
-          </Col>
-          <Col>
-            <Button block>Flatfish</Button>
-            <Button block>Sharks</Button>
-          </Col>
-          <Col>
-            <Button block>Forage Fish</Button> 
-            <Button block>Other</Button>
-          </Col>
+          <Row className='fish-button-row'>
+            <Col>
+              <div className='image-button center-text' onClick={() => console.log('rockfish')}>
+                <Image className='button-image' src={RockFish}/>
+                <div className='button-text'>
+                  RockFish
+                </div>
+              </div> 
+              {/* <Button block>Salmon</Button> */}
+              <div className='image-button center-text' onClick={() => console.log('Salmon')}>
+                <Image className='button-image' src={Salmon}/>
+                <div className='button-text'>
+                  Salmon
+                </div>
+              </div>
+              <div className='image-button center-text' onClick={() => console.log('Other')}>
+                <Image className='button-image' src={OtherFish}/>
+                <div className='button-text'>
+                  Other
+                </div>
+              </div>
+            </Col>
+            <Col>
+            <div className='image-button center-text' onClick={() => console.log('Flatfish')}>
+                <Image className='button-image' src={Flatfish}/>
+                <div className='button-text'>
+                  FlatFish
+                </div>
+              </div>
+              <div className='image-button center-text' onClick={() => console.log('Sharks')}>
+                <Image className='button-image' src={Sharks}/>
+                <div className='button-text'>
+                  Sharks
+                </div>
+              </div>
+              <div className='image-button center-text' onClick={() => console.log('Other')}>
+                <Image className='button-image' src={All}/>
+                <div className='button-text'>
+                  Other
+                </div>
+              </div>
+            </Col>
+            <Col>
+            <div className='image-button center-text' onClick={() => console.log('Forage Fish')}>
+                <Image className='button-image' src={ForageFish}/>
+                <div className='button-text'>
+                  Forage Fish
+                </div>
+              </div>
+              <div className='image-button center-text' onClick={() => console.log('Other')}>
+                <Image className='button-image' src={Sculpin}/>
+                <div className='button-text'>
+                  Other
+                </div>
+              </div>
+            </Col>
+          </Row>
+          <Row className='text-center'>
+            <Col className='selected-fish-header'>
+              <h1>RockFish</h1>
+            </Col>
           </Row>
           <Row>
             <Col>
-              <Image 
-                className='salmon'
-                src={Salmon}
-              />
+            <Image 
+              className='select-and-play-image'
+              src={SelectAndPlay}
+            />
             </Col>
           </Row>
         </Col>
