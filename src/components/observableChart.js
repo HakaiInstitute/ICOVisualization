@@ -16,16 +16,10 @@ function Notebook() {
 
   return (
     <div ref={ref}>
-     <Col>
-          Fish observed at <b>Quadra Island</b>
-          <div className="Notebook">
-          <div className="viewof-sites"></div>    
-          </div>
-        </Col>
-      {/* <div className="Notebook">
+      <div className="Notebook">
       <div className="share"></div>
         <div className="viewof-cc"></div>
-      </div> */}
+      </div>
     </div>
   );
 }
