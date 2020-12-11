@@ -17,31 +17,32 @@ import SelectAndPlay from '../assets/selectAndPlay.png'
 import SingleTimeSeries from '../assets/timeseriesSingle.png'
 import './style.css'
 // import SampleSiteMap from './observableViz'
-// import SampleChart from './observableChart'
+import SampleChart from './observableChart'
 import {Runtime, Inspector} from "@observablehq/runtime";
 import notebook from "73c68590a6b8ba4c";
 
 // import Chart from '../components/chart.jsx' // Uncomment if you wish to bring D3 into the template, and the <Chart><Chart/> component line in the render function.
 
-function Notebook() {
-  const ref = useRef();
+// function Notebook() {
+//   const ref = useRef();
 
-  useEffect(() => {
-    (new Runtime).module(notebook, name => {
-      if (name === "viewof cc") return Inspector.into(ref.current.querySelector(".viewof-cc"))();
-      if (name === "share") return Inspector.into(ref.current.querySelector(".share"))();
-      if (name === "viewof sites") return Inspector.into(ref.current.querySelector(".viewof-sites"))();
-      if (name === "viewof rects") return Inspector.into(ref.current.querySelector(".viewof-rects"))();
-      if (name === "style") return Inspector.into(ref.current.querySelector(".style"))();
+//   useEffect(() => {
+//     (new Runtime).module(notebook, name => {
+//       if (name === "viewof cc") return Inspector.into(ref.current.querySelector(".viewof-cc"))();
+//       if (name === "share") return Inspector.into(ref.current.querySelector(".share"))();
+//       if (name === "viewof sites") return Inspector.into(ref.current.querySelector(".viewof-sites"))();
+//       if (name === "viewof rects") return Inspector.into(ref.current.querySelector(".viewof-rects"))();
+//       if (name === "style") return Inspector.into(ref.current.querySelector(".style"))();
 
 
-    });
-  }, []);
+//     });
+//   }, []);
+export default function ReactD3Viz () {
 
   return (
 
     
-    <div ref={ref}>
+    // <div ref={ref}>
     
      <Container>
       <Row>
@@ -69,12 +70,12 @@ function Notebook() {
         </h1>
       </Row>
       <Row>
-        <Col>
+        {/* <Col>
           Fish observed at <b>Quadra Island</b>
           <div className="Notebook">
           <div className="viewof-sites"></div>    
           </div>
-        </Col>
+        </Col> */}
         <Col>
           <Row className='fish-button-row'>
           <div className="Notebook">
@@ -82,6 +83,7 @@ function Notebook() {
           <div className="style"></div>    
           </div>
           </Row>
+          <SampleChart />
           {/* <Row className='text-center'>
             <Col className='selected-fish-header'>
               <h1>RockFish</h1>
@@ -187,11 +189,11 @@ function Notebook() {
     </Container>
       
       
-    </div>
+    // </div>
   );
 }
 
-export default Notebook;
+// export default Notebook;
 
 // export default function ReactD3Viz () {
 //   return (
@@ -202,4 +204,4 @@ export default Notebook;
 
 // This is where react reaches into the DOM, finds the <div id="chart"> element, and replaces it with the content of ReactD3Viz's render function JSX.
 const domContainer = document.querySelector('#reactchart')
-ReactDOM.render(<Notebook />, domContainer)
+ReactDOM.render(<ReactD3Viz />, domContainer)

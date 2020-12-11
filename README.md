@@ -1,6 +1,90 @@
-# React D3 Template Repo
+# ICO Data Explorer
 
-### Fork me on Github to create your own interactive visualizations!!
+## Project Description
+The Integrated Coastal Observatory (ICO) is a network of community partners who are collecting monthly environmental-DNA (eDNA) samples in order to better understand local and coastal patterns of marine biodiversity. The ICO Data Explorer is an on-line data visualization tool that will facilitate user-driven exploration of these genetic data across space and time. 
+
+## RACI Project participants
+We utilize the RACI matrix to understand roles https://en.wikipedia.org/wiki/Responsibility_assignment_matrix
+### Responsible
+Mat Brown and Jorin Weatherson (Data visualization design and implementation), Matt Lemay (Project direction, scientific expert, under user proxy).
+### Accountable
+Ray Brunsting (Manager)
+### Consulted
+Eric Peterson, Christina Munck (Design), Sue Velazquez (Design, End user feedback), Member of the public (End user design feedback)
+### Informed
+Eric (Executive)
+
+## Critical features and functionality
+### Functional requirements
+End users must be able to:
+- See a geographical map of data sources
+- Select data sources and observe data through time
+- Select time-points to observe data across data sources
+- Filter output to certain focal species of interest (both within and among data sources)
+- Change the time-frame that is being viewed
+- Output custom summary tables of the diversity present at different data sources
+
+
+### Non-function requirements
+End users must be able to:
+- Understand how local diversity changes through time*
+- Understand how diversity changes across space 
+- Quantify the prevalence of target species at a particular site*
+- Feel invested in the ICO project and validated for their ongoing work collecting samples*
+- Feel a sense of pride in their contribution to a large-scale coastal network*
+
+
+## Milestones / Design Feedback Methodology
+1. Design
+- Design conceptualization
+- Design feedback with end users and end user proxies (small team)
+- Feedback incorporation
+- **Initial design complete**
+
+2. MVP
+- Initial react architecture
+- Visualizations on Observable
+- Map of sites
+- Reusable bar graph
+- Brush for bar graph
+- Scrubber
+- Fish selection menu (lots of pictures of fish)
+- automation of downloading/installing updates to viz into react?
+- Design feedback from team, Eric, end users
+- Feedback incorporation
+- **MVP complete**
+
+
+## User Stories
+### Public End User
+
+- Tagline
+
+   Wants a better understanding of the marine diversity present at their collection site. Wants to understand how local diversity changes over time.
+
+- Perspective and Unmet Needs
+
+   Biodiversity surveys are costly and time-consuming. Our partners are looking for a simple method for assessing marine biodiversity. They also want to understand how genomic technology (such as eDNA) can be used for bio-monitoring, but without the need to understand anything about genomics.
+  
+- Key Functionalities and Visualizations
+  
+   These will vary at each location depending on people’s interests, but some common goals will be to know whether certain taxa are present at their location and understand the seasonality of these patterns. 
+ 
+   
+- Acceptance Criteria
+  
+  An ICO partner can interpret the spatial and temporal distribution of eDNA-derived biodiversity data without any knowledge of the underlying genetic approaches. The visualization tool will further help the partner feel invested and essential to the ICO initiative.
+
+
+## Data Sources and Processes
+
+- Tables of genetic data cataloguing diversity from each sample collected by the ICO network
+- Tables of metadata containing the location, timing (etc, etc) of each sample from each source
+
+- Data can be stored in the local repository to start but should be eventually be moved into the database and accessed through the API. 
+
+# Implementation and Code Base
+Based on the https://github.com/HakaiInstitute/ReactD3TemplateRepo template.
 
 Essential reading for converting normal D3 code to object oriented code.
 https://aspenmesh.io/using-d3-in-react-a-pattern-for-using-data-visualization-at-scale/
@@ -59,76 +143,3 @@ The basic architecture of the app is as follows:
 - `chart.jsx`: controls the rendering of the D3 chart by using React LifeCycle methods and local state. Alternatively, you can create charts using other npm packages such as Plotly and many others and describe their behaviour in here.
 ### src/d3/
 - `d3Chart.js`: contains the object oriented D3 code for constructing, loading data, initially drawing, and updating the chart based on control selections.
-
-# Getting Started with Create React App
-
-**We moved to using the create-react-app starting point for this ICO Vis project. The following sections are the default instructions included with that project.**
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject` DON'T DO THIS UNLESS YOU ARE CERTAIN
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

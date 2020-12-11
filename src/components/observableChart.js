@@ -1,6 +1,7 @@
 import React, {useRef, useEffect} from "react";
 import {Runtime, Inspector} from "@observablehq/runtime";
 import notebook from "73c68590a6b8ba4c";
+import {Container, Col, Row, Image, Button} from 'react-bootstrap'
 
 function Notebook() {
   const ref = useRef();
@@ -15,10 +16,16 @@ function Notebook() {
 
   return (
     <div ref={ref}>
-      <div className="Notebook">
+     <Col>
+          Fish observed at <b>Quadra Island</b>
+          <div className="Notebook">
+          <div className="viewof-sites"></div>    
+          </div>
+        </Col>
+      {/* <div className="Notebook">
       <div className="share"></div>
         <div className="viewof-cc"></div>
-      </div>
+      </div> */}
     </div>
   );
 }
