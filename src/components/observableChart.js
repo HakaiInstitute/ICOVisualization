@@ -36,12 +36,12 @@ function Notebook() {
         </Col>
       </Row>
       <Row>
-      <div className="Notebook">
+        <div className="Notebook">
       <div className="share"></div>
       <div className="viewof-cc"></div>
       </div>
       </Row>
-      </div>
+       </div> 
   );
 }
 
