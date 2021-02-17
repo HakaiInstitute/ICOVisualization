@@ -43,9 +43,12 @@ export default function ReactD3Viz() {
         </span>
       </Row>
       <Row>
-        <h1 className="section-header-question">
-          What fish are found where, and when?
-        </h1>
+        <h1 className="section-header-question">Fish species by Location</h1>
+      </Row>
+      <Row className="text-center lead">
+        <p className="">
+          Select a station to view the fish found at that location
+        </p>
       </Row>
       {/* loads the component for the first view, which includes the html */}
       <SampleChart />
