@@ -75,12 +75,22 @@ body {
 
 .viewof-sites {
   max-width: 480px;
+  /* min-width: 280px; */
   width: 100%;
   margin: auto;
 }
+
+
 
 .share {
   max-width: 960px;
   width: 100%;
   margin: auto;
+}
+
+.barCharts {
+  margin: auto;
+  margin-top: 100px;
+  /* max-width: 480px; */
+  width: 100%;
 }

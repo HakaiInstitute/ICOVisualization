@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "73c68590a6b8ba4c": "https://api.observablehq.com/d/73c68590a6b8ba4c.tgz?v=3",
     "@observablehq/runtime": "^4.8.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "73c68590a6b8ba4c": "https://api.observablehq.com/d/73c68590a6b8ba4c.tgz?v=3",
     "add": "^2.0.6",
     "bootstrap": "^4.5.3",
     "react": "^17.0.1",
