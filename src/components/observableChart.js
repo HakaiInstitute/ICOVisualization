@@ -19,7 +19,7 @@ function Notebook() {
         return Inspector.into(ref.current.querySelector(".viewof-cc"))();
       if (name === "share")
         return Inspector.into(ref.current.querySelector(".share"))();
-
+      // use this to modify cell ontent from obervable https://jsfiddle.net/mbrown99/rjnwvmb8/
       // if (name === "type") {
       //   const node = document.querySelector("#type-output");
       //   return {
