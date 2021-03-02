@@ -2174,10 +2174,15 @@
   "resolved" "https://registry.npmjs.org/@xtuc/long/-/long-4.2.2.tgz"
   "version" "4.2.2"
 
+"1aff5f3ccb61927a@https://api.observablehq.com/d/1aff5f3ccb61927a.tgz?v=3":
+  "integrity" "sha512-zjRWJ+J6CBhB8dwihCoFKsq6+unTqboyT2qGHMHDvvuWpqo0NYsfbD3vdaDNj439qIBd51EgSb8mocGpyoM3yw=="
+  "resolved" "https://api.observablehq.com/d/1aff5f3ccb61927a.tgz?v=3"
+  "version" "2192.0.0"
+
 "73c68590a6b8ba4c@https://api.observablehq.com/d/73c68590a6b8ba4c.tgz?v=3":
-  "integrity" "sha512-tV+IrNy4+a3D5HPXp/05CgcVhI1FP3bWxBupMctafX+rtKRbpuN/CM2BnLhHUvpRIGdkYtEWG1DIO5NVuqYYbQ=="
+  "integrity" "sha512-H+bOraUXBgqkcl6l9s0ZD4bv/uJuZSDtlX9uJSiiZ6gpmc8iQnNK0+CwAJZDYarf2+eEy8EtadaquVosCpyzzg=="
   "resolved" "https://api.observablehq.com/d/73c68590a6b8ba4c.tgz?v=3"
-  "version" "1434.0.0"
+  "version" "1535.0.0"
 
 "abab@^2.0.3":
   "integrity" "sha512-9IK9EadsbHo6jLWIpxpR6pL0sazTXV6+SQv25ZB+F7Bj9mJNaOc4nCRabwd5M/JwmUa8idz6Eci6eKfJryPs6Q=="

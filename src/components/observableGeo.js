@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { Runtime, Inspector } from "@observablehq/runtime";
-import notebook from "73c68590a6b8ba4c";
+import notebook from "1aff5f3ccb61927a";
 import { Container, Col, Row, Image, Button } from "react-bootstrap";
 
 function Notebook() {
@@ -8,37 +8,36 @@ function Notebook() {
 
   useEffect(() => {
     new Runtime().module(notebook, (name) => {
+      if (name === "viewof fishSelect")
+        return Inspector.into(
+          ref.current.querySelector(".viewof-fishSelect")
+        )();
+      if (name === "viewof speciesList")
+        return Inspector.into(
+          ref.current.querySelector(".viewof-speciesList")
+        )();
+      if (name === "viewof date")
+        return Inspector.into(ref.current.querySelector(".viewof-date"))();
       if (name === "viewof sites")
-        return Inspector.into(ref.current.querySelector(".viewof-sites"))();
-      if (name === "viewof rects")
-        return Inspector.into(ref.current.querySelector(".viewof-rects"))();
-      if (name === "style")
-        return Inspector.into(ref.current.querySelector(".style"))();
-
+        return Inspector.into(ref.current.querySelector(".viewof-map"))();
       if (name === "viewof cc")
         return Inspector.into(ref.current.querySelector(".viewof-cc"))();
       if (name === "share")
         return Inspector.into(ref.current.querySelector(".share"))();
-      if (name === "viewof selectedSite")
-        return Inspector.into(
-          ref.current.querySelector(".viewof-selectedSite")
-        )();
-
-      // use this to modify cell ontent from obervable https://jsfiddle.net/mbrown99/rjnwvmb8/
-      // if (name === "type") {
-      //   const node = document.querySelector("#type-output");
-      //   return {
-      //     pending() {},
-      //     fulfilled(value) {
-      //       node.innerText = value;
-      //     },
-      //     rejected(error) {
-      //       node.textContent = error.message;
-      //     },
-      //   };
-      // }
-      if (name === "title")
-        return Inspector.into(ref.current.querySelector(".title"))();
+      // return [
+      //   "share",
+      //   "heatData",
+      //   "mapLocs",
+      //   "chartData",
+      //   "chart2",
+      //   "sites",
+      //   "barz",
+      //   "maxSitesPerMonth",
+      //   "monthlySiteCount",
+      //   "sitesCountbyMonth",
+      //   "cc",
+      //   "dateFilter",
+      // ].includes(name);
     });
   }, []);
 
@@ -48,16 +47,21 @@ function Notebook() {
         <Col>
           {/* Fish observed at <b>Quadra Island</b> */}
           <div className="Notebook">
-            <div className="viewof-selectedSite"></div>
-            <div className="viewof-sites"></div>
+            <div className="viewof-map"></div>
+            <div className="viewof-date"></div>
           </div>
         </Col>
 
         <Col>
           {/* <Row className='fish-button-row'> */}
           <div className="Notebook">
-            <div className="viewof-rects"></div>
-            <div className="style"></div>
+            <div className="viewof-fishSelect"></div>
+            <div
+              className="viewof-speciesList"
+              style={{ textAlign: "center" }}
+            ></div>
+            {/* <div className="viewof-date"></div> */}
+            {/* <div className="style"></div> */}
           </div>
         </Col>
       </Row>
@@ -71,7 +75,7 @@ function Notebook() {
           {/* <p className="">
             <span id="type-output"></span> at location
           </p> */}
-          <div className="title" style={{ textAlign: "center" }}></div>
+          {/* <div className="title"></div> */}
           <div className="share"></div>
           <div className="viewof-cc"></div>
         </div>

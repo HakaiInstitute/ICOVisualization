@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "1aff5f3ccb61927a": "https://api.observablehq.com/d/1aff5f3ccb61927a.tgz?v=3",
     "73c68590a6b8ba4c": "https://api.observablehq.com/d/73c68590a6b8ba4c.tgz?v=3",
     "add": "^2.0.6",
     "bootstrap": "^4.5.3",
